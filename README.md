@@ -6,12 +6,16 @@
 - [Demo](#demo)
 - [Built With](#built-with)
 
-## Overview
-A REST API built with Python 
+### Overview
+A REST API built with Python
 
-## Demo
+- Using the demo links below you can view the api or register as user.
+- On registration, you can login to create, update and delete posts.
+
+### Demo
+
 - [View API](https://blog.tylerking.io/)
-- [Register as User](https://blog.tylerking.io/rest-auth/registration/)
+- [Register](https://blog.tylerking.io/rest-auth/registration/)
 
 ### Built With
 - [Django](https://www.djangoproject.com/)
