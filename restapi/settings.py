@@ -33,16 +33,19 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'corsheaders',
     'dj_rest_auth.registration',
     'dj_rest_auth',
     'rest_framework',
     'rest_framework.authtoken',
-    'backend'
+    'backend',
 ]
 
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,6 +76,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'restapi.wsgi.application'
 
+CORS_ALLOWED_ORIGINS = [
+    "https://tylerking.io",
+    "https://blog.tylerking.io",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
