@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication, SessionAuthentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Article
 from .serializers import ArticleSerializer
 from .permissions import IsAuthor
@@ -10,7 +10,7 @@ class ArticleViewSet(viewsets.ModelViewSet):
     serializer_class = ArticleSerializer
     lookup_field = 'slug'
 
-    permission_classes = [IsAuthenticated, IsAuthor]
+    permission_classes = [IsAuthenticatedOrReadOnly, IsAuthor]
     authentication_classes = (TokenAuthentication, SessionAuthentication)
 
     def perform_create(self, serializer):
