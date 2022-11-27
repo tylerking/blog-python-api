@@ -101,7 +101,6 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
 
-'''
 # Authentication
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -113,8 +112,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ]
 }
-'''
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
